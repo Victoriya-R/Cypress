@@ -1,6 +1,7 @@
-describe('Тестирование покупки на сайте testqastudio.me', function () {
+//Название сайта изменено из-за политики конфиденциальности
+describe('Тестирование покупки на сайте testqa.me', function () {
     it('Позитивная проверка покупки', function () {
-        cy.visit('https://testqastudio.me/');
+        cy.visit('https://testqa.me/');
         cy.get('.post-11342 > .product-inner > .product-thumbnail > .woocommerce-LoopProduct-link > .attachment-woocommerce_thumbnail').click();
         cy.get('.summary > .cart > .product-button-wrapper > .quantity > .increase > svg').click().click();
         cy.get('.summary > .cart > .product-button-wrapper > .single_add_to_cart_button').click();
@@ -21,7 +22,7 @@ describe('Тестирование покупки на сайте testqastudio.m
         cy.get('#billing_state').type('Portugal');
         cy.get('#billing_postcode').type('279113');
         cy.get('#billing_phone').type('89119590535');
-        cy.get('#billing_email').type('german@dolnikov.ru');
+        cy.get('#billing_email').type('email@yandex.ru');
         cy.get('#place_order').click();
         cy.contains('Ваш заказ принят. Благодарим вас.');
         })
